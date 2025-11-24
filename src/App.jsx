@@ -3,7 +3,6 @@ import { Header } from "./Header";
 import { ActorsPage } from "./ActorsPage";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
@@ -21,5 +20,14 @@ function Header() {
     </header>
   );
 }
+
+function Footer() {
+  return (
+    <footer>
+      <p>Copyright 2025</p>
+    </footer>
+  );
+}
+
 
 export default App
