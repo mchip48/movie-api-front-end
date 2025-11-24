@@ -13,22 +13,4 @@ function App() {
   )
 }
 
-function Header() {
-  return (
-    <header>
-      <a href='#'>Home</a> | <a href='#actors-index'>All actors</a> | <a href='#actors-new'>New Actor</a>
-    </header>
-  );
-}
-
-
-function Footer() {
-  return (
-    <footer>
-      <p>Copyright 2025</p>
-    </footer>
-  );
-}
-
-
 export default App
