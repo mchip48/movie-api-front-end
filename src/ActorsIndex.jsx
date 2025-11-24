@@ -1,4 +1,4 @@
-function ActorsIndex() {
+export function ActorsIndex(props) {
   return (
     <div id="actors-index">
       <h1>All {actors.actorsProp.length} Actors</h1>
