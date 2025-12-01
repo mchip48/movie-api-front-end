@@ -8,18 +8,26 @@ export function ActorsPage() {
   const [actors, setActors] = useState([]);
 
   const handleIndex = () => {
-    axios.get("http://localhost:3000/actors.json").then((response) => {
+    axios.get("/actors.json").then((response) => {
       console.log(response.data);
       setActors(response.data);
     })
   }
 
+  const handleCreate = (params, successCallback) => {
+    console.log("handleCreate");
+    axios.post("/actors.json", params).then((response) => {
+      setActors([...actors, response.data]);
+      successCallback();
+    });
+  };
+
   useEffect(handleIndex, []);
 
   return (
     <div>
-      <ActorsNew />
-      <ActorsIndex actorsPage={actors} />
+      <ActorsNew onCreate={handleCreate}/>
+      <ActorsIndex actorsProp={actors} />
     </div>
   );
 }
